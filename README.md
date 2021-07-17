@@ -1,11 +1,12 @@
-<p align="center">
-<img src="https://telegra.ph/file/9d2f4b65139ed26577bc8.jpg" alt="NINO BOT" width="128" height="128"/>
+<div align="center">
+<img src="https://telegra.ph/file/9d2f4b65139ed26577bc8.jpg" alt="NinoWangy" width="300" />
+
 </p>
 <p align="center">
-<a href="#"><img title="NINO BOT" src="https://img.shields.io/badge/NINO BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="Nino Wangy" src="https://img.shields.io/badge/Nino Wangy-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
-<a href="https://github.com/Nino-chan02"><img title="Author" src="https://img.shields.io/badge/Author-Nino-chan02-red.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/Nino-chan02"><img title="Author" src="https://img.shields.io/badge/Author-Nino-chan02-red.svg?style=for-the-badge&logo=github" /></a>
 </p>
 <p align="center">
 <a href="https://github.com/Nino-chan02/followers"><img title="Followers" src="https://img.shields.io/github/followers/Nino-chan02?color=blue&style=flat-square"></a>
