@@ -33,7 +33,6 @@
 * [Git](https://git-scm.com/downloads)
 * [FFmpeg](https://github.com/BtbN/FFmpeg-Builds/releases) (for sticker command)
 * [Libwebp](https://developers.google.com/speed/webp/download) (for sticker wm)
-* [Image Magic](https://imagemagick.org/script/download.php) ( for nulis command, Centang Kolom 1,2,3,5,6)
 * Any text editor
 
 # Instalasi
