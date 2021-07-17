@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://telegra.ph/file/dc74146134bd9d4dabc6c.jpg" alt="NINO BOT" width="128" height="128"/>
+<img src="https://telegra.ph/file/9d2f4b65139ed26577bc8.jpg" alt="NINO BOT" width="128" height="128"/>
 </p>
 <p align="center">
 <a href="#"><img title="NINO BOT" src="https://img.shields.io/badge/NINO BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
