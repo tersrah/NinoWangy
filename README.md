@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://telegra.ph/file/9d2f4b65139ed26577bc8.jpg" alt="NinoWangy" width="300" />
+<img src="https://telegra.ph/file/9b873234a9cc47a5916ae.jpg" alt="NinoWangy" width="300" />
 
 </p>
 <p align="center">
