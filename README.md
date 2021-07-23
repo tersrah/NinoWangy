@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Nino-chan02"><img title="Author" src="https://img.shields.io/badge/Author-OhMyNino-purple.svg?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/Nino-chan02"><img title="Author" src="https://img.shields.io/badge/Author-Marz-purple.svg?style=for-the-badge&logo=github" /></a>
 </p>
 <p align="center">
 <a href="https://github.com/Nino-chan02/followers"><img title="Followers" src="https://img.shields.io/github/followers/Nino-chan02?color=blue&style=flat-square"></a>
