@@ -108,3 +108,4 @@ webpmux -version
 * [`Slavyan`](https://github.com/SlavyanDesu)
 * [`Galang`](https://github.com/Zobin33)
 * [`Franky`](https://github.com/Frankysolo)
+* [`Ryan`](https://github.com/HiRyn)
