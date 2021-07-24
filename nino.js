@@ -813,19 +813,21 @@ nino.sendMessage(from, rulesBot(prefix), MessageType.text, {quoted: mek})
 │
 │   「 *${botName}* 」`
 
-const buttons = [
-
-{buttonId: 'OWNER', buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: 'RULES', buttonText: {displayText: 'RULES'}, type: 1}
-]
-const buttonsMessage = {
-    contentText: `${menu}`,
-    footerText: 'Hello All 🗿',
-    buttons: buttons,
-    headerType: 1
-}
-               const sendMsg = await nino.prepareMessageFromContent(from,{buttonsMessage}, {quoted: mek, thumbnail:fs.readFileSync('./media/wpmobile.png')})
-               nino.relayWAMessage(sendMsg)
+const buttons = [
+
+{buttonId: 'OWNER', buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: 'RULES', buttonText: {displayText: 'RULES'}, type: 1}
+]
+
+const buttonsMessage = {
+    contentText: `${menu}`,
+    footerText: 'Hello All 🗿',
+    buttons: buttons,
+    headerType: 1
+}
+
+               const sendMsg = await nino.prepareMessageFromContent(from,{buttonsMessage}, {quoted: freply, thumbnail:fs.readFileSync('./media/wpmobile.png')})
+               nino.relayWAMessage(sendMsg)
                break
 //------------------< Game >------------------- 
         case 'limitgame': 
