@@ -109,3 +109,4 @@ webpmux -version
 * [`Galang`](https://github.com/Zobin33)
 * [`Franky`](https://github.com/Frankysolo)
 * [`Ryan`](https://github.com/HiRyn)
+* [`Rashid`](https://github.com/rashidsiregar28)
