@@ -165,7 +165,7 @@ module.exports = nino = async (nino, mek) => {
 		const type = Object.keys(mek.message)[0]        
         const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
         const prefix = /^[°•π÷×¶∆£¢€¥®™=|~#%^&.?/\\©^z+*,;]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™=|~#%^&.?/\\©^z+*,;]/gi) : '!'
-        body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : (type == 'stickerMessage') && (getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== null && getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) : ""
+        body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : (type == 'stickerMessage') && (getCmd(mek.message[type].fileSha256.toString('base64')) !== null && getCmd(mek.message[type].fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message[type].fileSha256.toString('base64')) : ""
 		budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 		const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()		
 		const args = body.trim().split(/ +/).slice(1)
@@ -751,30 +751,11 @@ module.exports = nino = async (nino, mek) => {
 }
 	    if (isCmd && !isRegister) return reply(`You are not verified\n\nReply this chat and send bot password\n\nHint : \nPassword contains 4 digit number\nCheck password at: https://nino-chan02.github.io`)
        
-            // Button Cmd By HiRyan
-        if (responseButton === 'OPEN') {
-	       nino.sendMessage(from, `「 *SUCCES OPEN GRUP* 」`, MessageType.text)
-		   nino.groupSettingChange(from, GroupSettingChange.messageSend, false)
-		   } else if (responseButton === 'CLOSE') {
-	       await nino.groupSettingChange(from, GroupSettingChange.messageSend, true)
-	       nino.sendMessage(from, `「 *SUCCES CLOSE GRUP* 」`, MessageType.text)
-}
-
-//Button Cmd 2
-let R = fs.readFileSync('./media/Nakano.jpg')
-let Y = fs.readFileSync('./media/Nino.jpg')
-let N = fs.readFileSync('./media/wpmobile.png')
-
-if(selectedButton == 'id1'){
-return nino.sendMessage(from, R, image, {quoted: mek})
-} else if(selectedButton == 'id2'){
-return nino.sendMessage(from, Y, image, {quoted: mek})
-} else if(selectedButton == 'id3'){
-return nino.sendMessage(from, N, image, {quoted: mek})
-} else if(selectedButton == 'OWNER'){
-sendKontak(from, `${owner}`, `${ownerName}`, 'Sibukk!!')
-} else if(selectedButton == 'RULES'){
-nino.sendMessage(from, rulesBot(prefix), MessageType.text, {quoted: mek})
+       // Button
+        if(selectedButton == 'OWNER'){
+        sendKontak(from, `${owner}`, `${ownerName}`, 'Sibukk!!')
+        } else if(selectedButton == 'RULES'){
+        nino.sendMessage(from, rulesBot(prefix), MessageType.text, {quoted: mek})
 }
       
             switch(command){
@@ -2867,30 +2848,24 @@ teks = `\`\`\`BOT STATISTICS\`\`\`
              nino.groupDemoteAdmin(from, [entah])
 }
              break
-       case 'group':
-	   case 'grup':
-	         let po = nino.prepareMessageFromContent(from, {
-			 "listMessage":{
+      case 'group':
+      case 'grup':
+const rows = [
+ {title: 'Tutup Grup', description: "", rowId:"!closegrup"},
+ {title: 'Buka Grup', description: "", rowId:"!opengrup"}
+]
 
-                  "title": "*GROUP SETTING*",
-                  "description": "Chose open/close",
-                  "buttonText": "Prefix",
-                  "listType": "SINGLE_SELECT",
-                  "sections": [
-                     {
-                        "rows": [
-                           {
-                              "title": "OPEN",
-                              "rowId": ""
-                           },
-						   {
-                              "title": "CLOSE",
-                              "rowId": ""
-                           }
-                        ]
-                     }]}}, {}, {quoted: mek}) 
-             nino.relayWAMessage(po, {waitForAck: true, quoted: mek})
-			 break
+const sections = [{title: "Khusus Di Grup", rows: rows}]
+
+const button = {
+ buttonText: 'Pilih Disini',
+ description: "*Group Setting Changes*",
+ sections: sections,
+ listType: 1
+}
+
+              nino.sendMessage(from, button, MessageType.listMessage)
+              break
       case 'closegrup':
       case 'tutupgrup':
               nino.updatePresence(from, Presence.composing) 
