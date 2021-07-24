@@ -3508,7 +3508,7 @@ ttt = `${angka[1]}${angka[2]}${angka[3]}\n${angka[4]}${angka[5]}${angka[6]}\n${a
 
 ucapmenang = () => {
 ucapan1 = 
-`*🎳Result Game Tictactoe 🎲
+`*🎳Result Game Tictactoe 🎲*
 
 *Yeyyy Permainan Di Menangkan Oleh* @${tty.player1.split('@')[0]}\n
 *Ingin bermain lagi? ${prefix}tictactoe*`
