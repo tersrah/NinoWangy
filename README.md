@@ -39,6 +39,9 @@
 * [Libwebp](https://developers.google.com/speed/webp/download) (for sticker wm)
 * Any text editor
 
+# Modules Adiwajshing
+- Download [disini](https://www.mediafire.com/file/1l9xgp8n1rhg1hh/@adiwajshing.zip/file)
+
 # Instalasi
 ## For Windows
 ```bash
