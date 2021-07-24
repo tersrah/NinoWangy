@@ -742,7 +742,7 @@ module.exports = nino = async (nino, mek) => {
             console.log(color('[ CMD ]'), color(time, 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
             
         if (budy.toLowerCase() === `8473`){
-		if (isRegister) return reply('*Kamu sudah melakukan verifikasi*')
+		if (isRegister) return 
 		    register.push(sender)
 		    fs.writeFileSync('./database/user/register.json', JSON.stringify(register))
 		    teks = `Verification success\n\nPlease send *!menu* to view menu`
@@ -1648,7 +1648,7 @@ _*Tunggu Proses Upload Media......*_`
 })
              break
       case 'ssweb':
-             if (args.length == 0) return reply(`Example: ${prefix + command} https://yotsuchan.herokuapp.com/`)
+             if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/`)
              ini_link = args[0]
              ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ssweb?apikey=${setting.lolkey}&url=${ini_link}`)
              await nino.sendMessage(from, ini_buffer, image, { quoted: mek })
