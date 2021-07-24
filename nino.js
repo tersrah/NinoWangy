@@ -753,9 +753,9 @@ module.exports = nino = async (nino, mek) => {
        
        // Button
         if(selectedButton == 'OWNER'){
-        sendKontak(from, `${owner}`, `${ownerName}`, 'Sibukk!!')
+             sendKontak(from, `${owner}`, `${ownerName}`, 'Sibukk!!')
         } else if(selectedButton == 'RULES'){
-        nino.sendMessage(from, rulesBot(prefix), MessageType.text, {quoted: mek})
+             nino.sendMessage(from, rulesBot(prefix), MessageType.text, {quoted: mek})
 }
       
             switch(command){
